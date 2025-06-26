@@ -36,3 +36,9 @@
     background-image: url(../../assets/icons/checkbox-checked.svg);
   }
 }
+
+@media (width <= 26.875em) {
+  .terms-wrapper label{
+    font-size: 1rem;
+  }
+}

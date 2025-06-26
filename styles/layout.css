@@ -1,3 +1,9 @@
+html,
+body {
+  height: auto;
+  overflow-y: auto;
+}
+
 #app {
   display: grid;
   grid-template-columns: 51.25% 48.75%;
@@ -18,13 +24,13 @@ main {
   & .back {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
   }
 
   & h1 {
     font: 600 1.5rem/1.25 var(--font-family);
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -42,9 +48,50 @@ aside {
 
   & h2 {
     font: 600 2.5rem/1.25 var(--font-family);
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     & span {
       color: var(--text-highlight);
+    }
+  }
+}
+
+@media (width <= 26.875em) {
+  #app {
+    grid-template-columns: none;
+    height: auto;
+
+    & aside {
+      order: 1;
+      height: 100%;
+      padding: 1.5rem;
+      & h2 {
+        display: none;
+      }
+      & p {
+        display: none;
+      }
+
+      & .aside-container {
+        & header {
+          display: flex;
+          justify-content: center;
+        }
+
+        & header img {
+          width: 203px;
+          height: 2rem;
+        }
+        & > img {
+          margin-top: 0.5rem;
+          width: 312px;
+          height: 232px;
+        }
+      }
+    }
+
+    & main {
+      order: 2;
+      padding: 1.5rem;
     }
   }
 }

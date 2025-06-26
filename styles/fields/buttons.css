@@ -27,3 +27,14 @@ button {
     }
   }
 }
+
+
+@media (width <= 26.875em) {
+  button {
+    display: flex;
+    justify-content: center;
+    &.btn-secondary {
+    margin-left: 0;
+  }
+  }
+}
